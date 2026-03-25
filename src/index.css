@@ -1,4 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 @import "tailwindcss";
+
+.HopeCarelogo {
+  height: 40px;
+  width: 130px;
+  margin-top: 15px;
+  margin-left: 30px;
+}
+a:hover {
+  color: greenyellow;
+}
+.searchbar{
+  height: 30px;
+  width: 180px;
+}
