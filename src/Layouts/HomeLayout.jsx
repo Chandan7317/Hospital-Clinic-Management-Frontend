@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoMenu } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { CiSearch } from "react-icons/ci";
 import LogoImg from "../assets/HopeLogo.png";
+import { IoCloseSharp } from "react-icons/io5";
+import { IoMdArrowDropdown ,IoMdArrowDropright} from "react-icons/io";
 
 const HomeLayout = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <nav className="flex items-center justify-around w-full h-16 px-4 bg-[#013a71] fixed top-0">
       {/* Left Section */}
       <div className="flex items-center gap-3">
-        <IoMenu size={"30px"} className="text-white lg:hidden " />
+        <IoMenu
+          size={"30px"}
+          className="text-white lg:hidden "
+          onClick={() => setOpen(true)}
+        />
         <img src={LogoImg} alt="logo" className="h-10 hover:bg-amber-700" />
       </div>
 
@@ -22,10 +30,14 @@ const HomeLayout = () => {
           <Link to={"/"}>AboutUs</Link>
         </li>
         <li>
-          <Link to={"/"}>Speciality</Link>
+          <Link to={"/"} className="flex items-center gap-1">
+            Speciality <IoMdArrowDropdown className=" hover:rotate-180" />
+          </Link>
         </li>
         <li>
-          <Link to={"/"}>Services</Link>
+          <Link to={"/"} className="flex items-center gap-1">
+            Services <IoMdArrowDropdown className="hover:rotate-180" />
+          </Link>
         </li>
         <li>
           <Link to={"/"}>Appointments</Link>
@@ -36,7 +48,7 @@ const HomeLayout = () => {
       </ul>
 
       {/* Search Bar */}
-      <div className="hidden md:block relative w-[300px] lg:w-[300px]">
+      <div className="hidden md:block relative w-2xs lg:w-2xs">
         <input
           type="text"
           placeholder="Search..."
@@ -63,6 +75,51 @@ const HomeLayout = () => {
           </Link>
         </li>
       </ul>
+      {open && (
+        <div className="absolute top-16 left-0 bg-[#013a71] text-white lg:hidden ">
+          <div className="flex  ">
+            <ul className="flex flex-col ml-10">
+              <li>
+                <Link to={""}>Home</Link>
+              </li>
+              <li>
+                <Link to={"/"}>AboutUs</Link>
+              </li>
+              <li>
+                <Link to={"/"} className="flex items-center gap-1">
+                  Services
+                  <IoMdArrowDropright className=" hover:rotate-180" />
+                </Link>
+              </li>
+              <li>
+                <Link to={"/"} className="flex items-center gap-1">
+                  Speciality
+                  <IoMdArrowDropright  className=" hover:rotate-180" />
+                </Link>
+              </li>
+
+              <li>
+                <Link to={"/"}>Appointments</Link>
+              </li>
+              <li>
+                <Link to={"/"}>Emergency</Link>
+              </li>
+
+              <li>
+                <Link to={"/"}>Contact</Link>
+              </li>
+              <li>
+                <Link to={"/"}>English</Link>
+              </li>
+            </ul>
+            <div>
+              <button onClick={() => setOpen(false)}>
+                <IoCloseSharp />
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
