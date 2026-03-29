@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+.bg-colar{
+  background-color: #013a71;
+}
+
 .HopeCarelogo {
   height: 40px;
   width: 130px;
