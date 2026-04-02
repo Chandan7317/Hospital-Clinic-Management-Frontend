@@ -6,11 +6,11 @@ const Footer = () => {
   const currentDate = new Date();
   const year = currentDate.getFullYear();
   return (
-    <div className="text-[#ffffff] bg-[#3b70a1]  ">
-      <footer className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 justify-between justify-items-center">
+    <div className="text-[#ffffff] bg-[#5b7384] ">
+      <footer className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 w-[90%] mx-auto">
         <div className="mt-3 text-center sm:text-left">
-          <h3 className=" text-black text-2xl mb-3">For Patients</h3>
-          <ul className="text-[#f2ece5] space-y-1 ">
+          <h3 className=" text-white text-2xl font-semibold mb-3">For Patients</h3>
+          <ul className="text-[#f2ece5] space-y-1  ">
             <li>
               <Link to={"/FindaDoctor"}>Find a Doctor</Link>
             </li>
@@ -53,7 +53,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-3 text-center sm:text-left">
-          <h3 className="text-black text-2xl mb-3">Specialities</h3>
+          <h3 className="text-white text-2xl font-semibold mb-3">Specialities</h3>
           <ul className="text-[#f2ece5] space-y-1">
             <li>
               <Link to={"/Cardiac Care"}>Cardiac Care</Link>
@@ -89,7 +89,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-3 text-center sm:text-left">
-          <h3 className=" text-black text-2xl mb-3">Corporate</h3>
+          <h3 className=" text-white text-2xl font-semibold mb-3">Corporate</h3>
           <ul className="text-[#f2ece5] space-y-1">
             <li>
               <Link to={"/Aboutus"}>Abouts us</Link>
@@ -122,7 +122,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-3 text-center sm:text-left">
-          <h3 className=" text-black text-2xl mb-3">Our Hospitals</h3>
+          <h3 className=" text-white text-2xl font-semibold mb-3">Our Hospitals</h3>
           <ul className="text-[#f2ece5] space-y-1">
             <li>
               <Link to={"/HopeCarePatna"}>HopeCare Patna</Link>
@@ -153,37 +153,8 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* <div className="mt-3 text-center sm:text-left">
-          <h3 className=" text-black text-2xl mb-5">Connect with us</h3>
-          <ul className="flex items-center gap-4 space-y-1">
-            <li>
-              <Link to="">
-                {" "}
-                <BsFacebook size={"30px"} />
-              </Link>
-            </li>
-            <li>
-              <Link to="">
-                {" "}
-                <BsInstagram size={"30px"} />
-              </Link>
-            </li>
-            <li>
-              <Link to="">
-                {" "}
-                <BsLinkedin size={"30px"} />
-              </Link>
-            </li>
-            <li>
-              <Link to="">
-                {" "}
-                <BsTwitter size={"30px"} />
-              </Link>
-            </li>
-          </ul>
-        </div> */}
         <div className="mt-3 mb-3 text-center sm:text-left">
-          <h3 className="text-black text-2xl mb-5">Connect with us</h3>
+          <h3 className="text-white text-2xl font-semibold mb-5">Connect with us</h3>
 
           <ul className="flex items-center justify-center sm:justify-start gap-4">
             <li>
@@ -212,8 +183,8 @@ const Footer = () => {
 
       <div>
         {" "}
-        <section className="text-black text-center text-sm sm:text-base md:text-lg lg:text-2xl">
-          <h6>Copyright @ {year} | HopeCare All rights reserved</h6>
+        <section className=" text-gray-300 text-center text-sm sm:text-base md:text-lg lg:text-2xl">
+          <h6>@ {year} | HopeCare All rights reserved</h6>
         </section>
       </div>
     </div>

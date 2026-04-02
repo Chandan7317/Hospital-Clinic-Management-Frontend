@@ -1,6 +1,18 @@
 @import "tailwindcss";
+@plugin "daisyui";
 
-.bg-colar{
+/* bg-[#3b70a1]  */
+body {
+  background-color: #ffffff;
+  color: black;
+}
+.bg_colar {
+  background-color: #013a71;
+}
+.bg_colar_purple {
+  background-color: #ece4f4;
+}
+.btn {
   background-color: #013a71;
 }
 
@@ -10,10 +22,14 @@
   margin-top: 15px;
   margin-left: 30px;
 }
+.Home_Logo_size {
+  width: 100%;
+  height: 100%;
+}
 a:hover {
   color: greenyellow;
 }
-.searchbar{
+.searchbar {
   height: 30px;
   width: 180px;
 }
