@@ -6,8 +6,8 @@ const Footer = () => {
   const currentDate = new Date();
   const year = currentDate.getFullYear();
   return (
-    <div className="text-[#ffffff] bg-[#5b7384] ">
-      <footer className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 w-[90%] mx-auto">
+    <div className="text-[#ffffff] bg_colar">
+      <footer className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 w-[96%] mx-auto">
         <div className="mt-3 text-center sm:text-left">
           <h3 className=" text-white text-2xl font-semibold mb-3">For Patients</h3>
           <ul className="text-[#f2ece5] space-y-1  ">

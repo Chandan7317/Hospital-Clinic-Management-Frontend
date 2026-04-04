@@ -13,7 +13,7 @@ const HomePage = () => {
 
   return (
     <HomeLayout>
-      <div className="hero bg_colar_purple h-full w-[90%] mx-auto ga-10">
+      <div className="hero bg_colar_purple h-full sm:h-full md:w-full  lg:w-[96%] mx-auto ga-10">
         <div className="hero-content flex flex-col-reverse lg:flex-row">
           <div>
             <h1 className="text-3xl py-2 font-bold">
@@ -31,8 +31,12 @@ const HomePage = () => {
               and seamless coordination between staff and patients.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start lg:gap-10">
-              <button className="btn">Get Started</button>
-              <button className="btn ">Book Appointment</button>
+              <button className="bg-[#013a71] text-white font-semibold px-8 py-3 rounded hover:bg-green-600 hover:text-white   cursor-pointer">
+                Get Started
+              </button>
+              <button className="bg-[#013a71] text-white font-semibold px-8 py-3 rounded hover:bg-green-600 hover:text-white transition  cursor-pointer">
+                Book Appointment
+              </button>
             </div>
           </div>
 
@@ -47,9 +51,8 @@ const HomePage = () => {
       </div>
 
       {/* Card */}
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 w-[90%] mx-auto my-5">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 w-[96%] mx-auto my-5">
         {Card.map((ele) => {
-          // console.log(ele);
           const { id, heading, content, icon: Icon, bgc } = ele; // icon as component
 
           return (
