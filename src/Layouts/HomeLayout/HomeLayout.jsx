@@ -73,7 +73,7 @@ const HomeLayout = ({ children }) => {
 
             {/* Dropdown list */}
             <ul
-              className={`absolute w-52 font-normal rounded-md d- bg-colar group-hover:block z-50   ${specialityDropdown ? "block" : "hidden"} md:group-hover:block`}
+              className={`absolute w-52 font-normal rounded-md d- bg_colar group-hover:block z-50   ${specialityDropdown ? "block" : "hidden"} md:group-hover:block`}
             >
               <li className="mt-5">
                 <Link to={"/cardiaccare"}>Cardiac Care</Link>
@@ -123,7 +123,7 @@ const HomeLayout = ({ children }) => {
 
             {/* Dropdown list*/}
             <ul
-              className={`absolute w-52 font-normal rounded-md d- bg-colar group-hover:block z-50 ${serviceDropdown ? "block" : "hidden"}  md:group-hover:block `}
+              className={`absolute w-52 font-normal rounded-md d- bg_colar group-hover:block z-50 ${serviceDropdown ? "block" : "hidden"}  md:group-hover:block `}
             >
               <li className="mt-5">
                 <Link to={"/secondopinion"}>Second Opinion</Link>
@@ -204,7 +204,7 @@ const HomeLayout = ({ children }) => {
             </Link>
             {/* Dorpdown list */}
             <ul
-              className={`absolute w-45 font-normal rounded-b-sm d- bg-colar group-hover:block z-50 ${contactusDropdown ? "block" : "hidden"}  md:group-hover:block `}
+              className={`absolute w-45 font-normal rounded-b-sm d- bg_colar group-hover:block z-50 ${contactusDropdown ? "block" : "hidden"}  md:group-hover:block `}
             >
               <li className="mt-5">
                 <Link to={"/contactus"}>Contact Us</Link>

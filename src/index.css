@@ -33,3 +33,23 @@ a:hover {
   height: 30px;
   width: 180px;
 }
+
+/* Card Bg Colar */
+.BgColor_1 {
+  background-color: #e0e0e0;
+}
+.BgColor_2 {
+  background-color: #c0e0e0;
+}
+.BgColor_3 {
+  background-color: #e0c0e0;
+}
+.BgColor_4 {
+  background-color: #e0e0a0;
+}
+.BgColor_5 {
+  background-color: #e0e0e0;
+}
+.BgColor_6 {
+  background-color: #c0e0e0;
+}

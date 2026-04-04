@@ -1,7 +1,8 @@
 import React from "react";
 import HomeLayout from "../../Layouts/HomeLayout/HomeLayout";
 import HomeLogo from "../../assets/HomeLogo.jpg";
-import HomeLogo1 from "../../assets/HomePage.jpg";
+import { Card } from "../../utils/Constants/homepages/card";
+
 const HomePage = () => {
   return (
     <HomeLayout>
@@ -36,6 +37,23 @@ const HomePage = () => {
             />
           </div>
         </div>
+      </div>
+
+      {/* Card */}
+
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 w-[90%] mx-auto my-5">
+        {Card.map((ele ) => {
+          const { id, image, heading, content } = ele;
+
+          return (
+            <div key={id} className={`card w-full shadow-sm ${ele.bgc}`}>
+              <div className="card-body">
+                <h2 className="card-title">{heading}</h2>
+                <p className="font-serif">{content}</p>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </HomeLayout>
   );
