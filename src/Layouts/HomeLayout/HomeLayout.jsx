@@ -244,7 +244,7 @@ const HomeLayout = ({ children }) => {
                   <Link to={"/"}>Home</Link>
                 </li>
                 <li>
-                  <Link to={"/about"}>AboutUs</Link>
+                  <Link to={"/abouts"}>AboutUs</Link>
                 </li>
 
                 {/* Speciality Mobile */}
