@@ -13,6 +13,7 @@ const HomePage = () => {
 
   return (
     <HomeLayout>
+      {/* {Hero} */}
       <div className="hero bg_colar_purple h-full sm:h-full md:w-full  lg:w-[96%] mx-auto ga-10">
         <div className="hero-content flex flex-col-reverse lg:flex-row">
           <div>

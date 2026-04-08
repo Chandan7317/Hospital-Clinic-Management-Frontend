@@ -1,6 +1,6 @@
 import React, { Children, useEffect, useRef, useState } from "react";
 import { IoMenu } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { CiSearch } from "react-icons/ci";
 import LogoImg from "../../assets/HopeLogo.png";
 import { IoCloseSharp } from "react-icons/io5";
@@ -226,7 +226,7 @@ const HomeLayout = ({ children }) => {
           </li>
           <li>
             <Link
-              to={"/Signin"}
+              to={"/login"}
               className="sm:flex text-white font-medium items-center"
             >
               Sign in
