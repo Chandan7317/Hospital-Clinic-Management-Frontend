@@ -1,5 +1,5 @@
 import { FaUserDoctor } from "react-icons/fa6";
-export const Card = [{
+export const Cards = [{
     id: 1,
     icon: FaUserDoctor, // component reference
     heading: "You're juggling multiple tools to manage patient records, billing, and consultations",
