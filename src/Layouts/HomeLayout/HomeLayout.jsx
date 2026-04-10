@@ -6,32 +6,41 @@ import LogoImg from "../../assets/HopeLogo.png";
 import { IoCloseSharp } from "react-icons/io5";
 import { IoMdArrowDropdown, IoMdArrowDropright } from "react-icons/io";
 import Footer from "../Footer/Footer";
+import Login from "../../Pages/Login/Login";
 
 const HomeLayout = ({ children }) => {
   const [open, setOpen] = useState(false);
   const [specialityDropdown, setSpecialityDropdown] = useState(false);
   const [serviceDropdown, setServiceDropdown] = useState(false);
   const [contactusDropdown, setcontactUsDropdown] = useState(false);
-
+  const [showLogin, setShowLogin] = useState(false);
   const dropdownRef = useRef();
 
   //! Close dropdown on outside click
-
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
         setServiceDropdown(false);
         setSpecialityDropdown(false);
         setcontactUsDropdown(false);
+        setShowLogin(false)
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  //! Lock/unlock background scroll when login modal opens/closes
+  useEffect(() => {
+    document.body.style.overflow = showLogin ? "hidden" : "auto";
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [showLogin]);
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Navbar */}
+      {/*  Header Navbar*/}
       <nav className="flex items-center justify-around w-full h-16 px-4 bg-[#013a71] fixed top-0 drawer left-0 z-50 ">
         {/* Left Section */}
         <div className="flex items-center gap-10">
@@ -226,7 +235,7 @@ const HomeLayout = ({ children }) => {
           </li>
           <li>
             <Link
-              to={"/login"}
+              onClick={() => setShowLogin(true)}
               className="sm:flex text-white font-medium items-center"
             >
               Sign in
@@ -424,6 +433,10 @@ const HomeLayout = ({ children }) => {
       <main className="grow pt-16">{children}</main>
       {/* Footer */}
       <Footer />
+
+      {/* Sigin in */}
+
+      <Login showLogin={showLogin} setShowLogin={setShowLogin} />
     </div>
   );
 };
