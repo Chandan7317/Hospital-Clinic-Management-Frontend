@@ -23,7 +23,7 @@ const HomeLayout = ({ children }) => {
         setServiceDropdown(false);
         setSpecialityDropdown(false);
         setcontactUsDropdown(false);
-        setShowLogin(false)
+
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -31,13 +31,14 @@ const HomeLayout = ({ children }) => {
   }, []);
 
   //! Lock/unlock background scroll when login modal opens/closes
-  useEffect(() => {
-    document.body.style.overflow = showLogin ? "hidden" : "auto";
+  // useEffect(() => {
+  //   document.body.style.overflow = showLogin ?   "hidden" : "auto";
 
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [showLogin]);
+  //   return () => {
+  //     document.body.style.overflow = "auto";
+  //   };
+  // }, [showLogin]);
+
   return (
     <div className="flex flex-col min-h-screen">
       {/*  Header Navbar*/}
